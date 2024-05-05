@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+
+        .body{
+            height: 55px;
+            width: 100%;
+            margin: 0 auto;
+            background-color: rgb(35, 38, 46);
+        }
+        .nav{
+            height: 55px;
+            width: 1050px;
+            margin: 0 auto;
+            background-color: rgb(35, 38, 46);
+        }
+        .title{
+            float: left;
+            font-size: 20px;
+            margin: 0 80px 0 15px;
+            color: rgb(1,149,134);
+            vertical-align: middle;
+            line-height: 55px;
+        }
+        .navContent{
+            line-height: 55px;
+
+        }
+        .navLeft{
+            float: left;
+            margin-right: 25px;
+        }
+        .navRight{
+            float: right;
+            margin-right: 30px;
+        }
+        .nav a{
+            color: rgb(180, 181, 190)
+        }
+        .nav a:hover{
+            color: rgb(197, 198, 204);
+            cursor: pointer;
+        }
+        .banxin{
+            height: 650px;
+            width: 100%;
+            margin: 0 auto;
+            background-color: rgb(35, 38, 46);
+            overflow: hidden;
+        }
+        .aside{
+            float: left;
+            width: 180px;
+            height: auto;
+            background-color: rgb(57, 61, 73);
+            color: rgb(180, 181, 190);
+            font-size: 16px;
+        }
+        .asideContent{
+            width: 180px;
+            height: 50px;
+            line-height: 50px;
+            padding-left: 30px;
+        }
+        .hide{
+            display: none;
+            background-color: rgb(40, 43, 51);
+        }
+        .hideBox{
+            width: 200px;
+            height: 50px;
+            background-color: rgb(35, 38, 46);
+            cursor: pointer;
+        }
+        .hideBox:hover{
+            color: #e3e2e2;
+        }
+        .asideBox{
+            cursor: pointer;
+        }
+        .asideBox:hover{
+            background-color: rgb(49, 52, 61);
+        }
+        .checkColor{
+            background-color:rgb(1,149,134);
+        }
+        #asideBottom{
+            margin-bottom: 350px;
+        }
+        .data{
+            float: left;
+            width: 890px;
+            height: 650px;
+            background-color: white;
+            text-align: center;
+        }
+        .none{
+            display: none;
+        }
+        .commonBox{
+            height: 50px;
+            width: 860px;
+            background-color: #e8e7e7;
+            border-left:rgb(1,149,134) solid 10px;
+            margin: 10px auto;
+        }
+        span{
+            color: rgb(180, 181, 190);
+        }
+        .line{
+            margin: auto;
+            width: 860px;
+            border-bottom: 1px solid #e8e7e7;
+        }
+        .searchBox{
+            margin: auto;
+            width: 868px;
+            height: 45px;
+            background-color: #e8e7e7;
+            border: 1px solid #9a9999;
+            border-bottom: 0;
+        }
+        .searchForm{
+            display: block;
+            height: 45px;
+            line-height: 45px;
+        }
+        .searchForm input{
+            width: 100px;
+            height: 25px;
+            border: 1px solid #9a9999;
+            margin: 0 3px 0 8px;
+            padding-left: 3px;
+        }
+        .searchForm button{
+            background-color: rgb(1,149,134);
+            color: white;
+            width: 50px;
+            height: 25px;
+        }
+        .searchForm button:hover{
+            background-color: rgb(15, 161, 145);
+            cursor: pointer;
+        }
+        .searchForm button:active{
+            background-color: rgb(1,149,134);
+            cursor: pointer;
+        }
+        .commonBox div{
+            text-align: left;
+            font-size: 16px;
+            padding-left: 10px;
+            line-height: 50px;
+        }
+        table{
+            background-color: #bebebe;
+            width: 870px;
+            margin: auto;
+            border-color: rgb(228, 229, 231);
+        }
+        thead{
+            height: 35px;
+            background-color: #e8e7e7;
+            line-height: 35px;
+            vertical-align:middle;
+        }
+        .active{
+            background-color: rgb(1,149,134);
+            color: white;
+        }
+        .page div{
+            float: left;
+        }
+        .page{
+            width: 870px;
+            height: 25px;
+            margin: 20px auto;
+        }
+        .pageNum div{
+            height: 27px;
+            width: 35px;
+            line-height: 27px;
+        }
+        .pageNum div:hover{
+            cursor: pointer;
+        }
+        .prePage,.nextPage{
+            height: 25px;
+            width: 60px;
+            line-height: 25px;
+            border: 1px solid #9a9999;
+        }
+        .sum{
+            height: 27px;
+            line-height: 27px;
+            margin-right: 10px;
+        }
+        .selectPageBox{
+            margin-left: 10px;
+            border: 1px solid #9a9999;
+            height: 25px;
+            width: 75px;
+        }
+        .selectPageBox>select{
+            border: none;
+            background-color: white;
+            height: 25px;
+        }
+        .selectPageBox option{
+            border-radius: 0;
+            border: none;
+            background-color: white;
+            height: 25px;
+        }
+        tbody>tr{
+            background-color: white;
+        }
+        tr>td{
+            padding: 5px;
+        }
+        .editorBtn{
+            background-color: rgb(1,149,134);
+            width: 35px;
+            height: 20px;
+            color: white;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .deleteBtn{
+            background-color: rgb(255, 87, 34);
+            width: 35px;
+            height: 20px;
+            color: white;
+            cursor: pointer;
+        }
+        .deleteBtn:hover{
+            background-color: rgb(253, 116, 74);
+        }
+        .pageBtn:hover{
+            cursor: pointer;
+        }
+        .pageBtn:active{
+            background-color: #e5e5e5;
+        }
+        .popup{
+            display: none;
+            position: absolute;
+            left: 350px;
+            top: 200px;
+            width: 350px;
+            height:150px;
+            background-color: white;
+            border: 1px solid rgb(171, 172, 173);
+        }
+        .confirm{
+            width: 80px;
+            height: 30px;
+            background-color: rgb(83,142,229);
+            color: white;
+            margin-right: 3px;
+        }
+        .cancel{
+            width: 80px;
+            height: 30px;
+            background-color: white;
+            color: #3f3f3f;
+            margin-left: 3px;
+            border: 1px solid rgb(216, 216, 217);
+        }
+        .tips{
+            font-size: 18px;
+            color: #3f3f3f;
+            margin: 5px;
+        }
+        .popContent{
+            font-size: 14px;
+            color: #5b5b5b;
+            margin: 20px 3px;
+        }
+        .editorPop{
+            position: absolute;
+            left: 350px;
+            top: 100px;
+            display: none;
+            width: 400px;
+            height: 500px;
+            background-color:white;
+            border: 1px solid rgb(216, 216, 217);
+        }
+        .editorPop>div{
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px;
+        }
+        .editorFrom{
+            text-align: left;
+            margin: 20px;
+        }
+        .editorFrom>input{
+            padding-left: 5px;
+            margin: 10px 0;
+            border: 1px solid rgb(216, 216, 217);
+        }
+        .editorFrom>.two{
+            width: 180px;
+            height: 25px;
+            display: inline-block;
+            margin-left: 45px;
+        }
+        .editorFrom>.four{
+            width: 180px;
+            height: 25px;
+            display: inline-block;
+            margin-left: 20px;
+        }
+        .editorFrom>.sex{
+            margin-left: 50px;
+        }
+        .editorFrom>.confirm{
+            margin-left: 60px;
+            margin-right: 20px;
+        }
+
+        .editorFrom>.editorActive{
+            display: inline;
+        }
+        .editorFrom>span{
+            display: none;
+            color: red;
+        }
+        .addFrom{
+            text-align: left;
+            margin: 20px;
+        }
+        .addFrom>input{
+            padding-left: 5px;
+            margin: 10px 0;
+            border: 1px solid rgb(216, 216, 217);
+        }
+        .addFrom>.two{
+            width: 180px;
+            height: 25px;
+            display: inline-block;
+            margin-left: 45px;
+        }
+        .addFrom>.four{
+            width: 180px;
+            height: 25px;
+            display: inline-block;
+            margin-left: 20px;
+        }
+        .addFrom>.sex{
+            margin-left: 50px;
+        }
+        .addFrom>.confirm{
+            background-color: rgb(1,149,134);
+            margin-left: 60px;
+            margin-right: 20px;
+        }
+
+        .addFrom>.addActive{
+            display: inline;
+        }
+        .addFrom>span{
+            display: none;
+            color: red;
+        }
+        .addEmpDataInner{
+            margin: 30px auto;
+            width: 400px;
+            height: 500px;
+            background-color:white;
+            border: 2px solid rgb(1,149,134)
+        }
+        .addTitle{
+            color: rgb(1,149,134);
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .confirm3:hover{
+            cursor: pointer;
+            background-color: rgb(3, 161, 145);
+        }
+        .confirm3:active{
+            background-color: rgb(1,149,134);
+        }
+        .cancel3:hover{
+            cursor: pointer;
+            background-color: #e5e5e5;
+        }
+        .cancel3:active{
+            background-color: white;
+        }
+        .angle_top {
+            content: '';
+            width: 0;
+            height: 0;
+            display: block;
+            border-style: solid;
+            border-width: 0 6px 6px;
+            border-color: transparent transparent #5e5e5e;
+            position: absolute;
+            transform: rotate(180deg);
+            bottom: 14px;
+            right: -17px;
+        }
+
+        .angle_bottom {
+            content: '';
+            width: 0;
+            height: 0;
+            display: block;
+            border-style: solid;
+            border-width: 0 6px 6px;
+            border-color: transparent transparent #5e5e5e;
+            position: absolute;
+            top: 10px;
+            right: -17px;
+            margin-left: 10px;
+        }
+        .on {
+            display: inline-block;
+            width: 10px;
+            height: 40px;
+            margin-right: 10px;
+            position: relative;
+            line-height: 40px;
+        }
+
+        .bon{
+            display: inline-block;
+            width: 50px;
+            height: 40px;
+            margin-right: 10px;
+            position: relative;
+            line-height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="body">
+        <div class="nav">
+            <div class="title">员工管理系统</div>
+            <div class="navContent navLeft"><a>考勤设置</a></div>
+            <div class="navContent navLeft"><a>其他管理</a></div>
+            <img src="" class="profile">
+            <div class="navContent navRight"><a>退出</a></div>
+            <div class="navContent navRight"><a>admin</a></div>
+        </div>
+    </div>
+
+        <div class="banxin">
+            <div class="aside">
+                <div class="asideContent asideBox" id="homePage">主页</div>
+                <div class="hide">
+                    <div class="asideContent hideBox">查看个人信息</div>
+                    <div class="asideContent hideBox">修改个人信息</div>
+                    <div class="asideContent hideBox">进行自我考勤</div>
+                    <div class="asideContent hideBox">查看考勤记录</div>
+                </div>
+                <div class="asideContent asideBox">员工管理</div>
+                <div class="hide">
+                    <div class="asideContent hideBox query">员工基本信息</div>
+                    <div class="asideContent hideBox addEmp">添加员工</div>
+                    <div class="asideContent hideBox">员工角色管理</div>
+                </div>
+                <div class="asideContent asideBox">加班管理</div>
+                <div class="hide">
+                    <div class="asideContent hideBox">加班申请</div>
+                    <div class="asideContent hideBox">加班记录</div>
+                    <div class="asideContent hideBox">加班审批</div>
+                </div>
+                <div class="asideContent asideBox">请假管理</div>
+                <div class="hide"></div>
+                <div class="asideContent asideBox">出差管理</div>
+                <div class="hide"></div>
+                <div class="asideContent asideBox" id="asideBottom">统计管理</div>
+            </div>
+            <div class="data empty">
+                <div class="commonBox"></div>
+                <span>该功能尚未开发</span>
+                <div class="line"></div>
+            </div>
+            <div class="data empData none">
+                <div class="commonBox"><div>员工数据</div></div>
+                <div class="searchBox">
+                    <form class="searchForm">
+                        id:<input type="text" placeholder="请输入id">
+                        <button id="id">查询</button>
+                        姓名:<input type="text" placeholder="请输入姓名">
+                        <button id="name">查询</button>
+                        学历:<input type="text" placeholder="请输入学历">
+                        <button id="education">查询</button>
+                        岗位:<input type="text" placeholder="请输入工作岗位">
+                        <button id="job">查询</button>
+                    </form>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                <div class="on">
+                                    ID
+                                <i class="angle_top"></i>
+                                <i class="angle_bottom"></i>
+                                </div>
+                            </th>
+                            <th>姓名</th>
+                            <th>性别</th>
+                            <th><div class="bon">
+                                出生日期
+                                <i class="angle_top"></i>
+                                <i class="angle_bottom"></i>
+                            </div></th>
+                            <th>学历</th>
+                            <th>工作岗位</th>
+                            <th>手机号码</th>
+                            <th>家庭住址</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tbody">
+                        <tr><td>你妈</td></tr>
+                    </tbody>
+                </table>
+                <div class="page">
+                    <div class="sum">共0条</div>
+                    <div class="prePage pageBtn">上一页</div>
+                    <div class="pageNum">
+                        <div class="active" data-id="1">1</div>
+                    </div>
+                    <div class="nextPage pageBtn">下一页</div>
+                    <div class="selectPageBox">
+                        <select>
+                            <option value="5">5条/页</option>
+                            <option value="8">8条/页</option>
+                            <option value="10">10条/页</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="popup">
+                    <div class="tips">提示</div>
+                    <div class="popContent">你确定要删除该员工吗</div>
+                    <input type="button" value="确认" class="confirm">
+                    <input type="button" value="取消" class="cancel">
+                </div>
+                <div class="editorPop">
+                    <div>编辑员工信息</div>
+                    <form class="editorFrom">
+                        姓名:<input type="text" class="two editorFromName"><span>输入2-5位的中文</span><br>
+                        性别:<input id="man" type="radio" value="男" class="sex editorFromSex" checked="checked" name="sex"/>男
+                        <input type="radio" id="woman" value="女" class="editorFromSex" name="sex">女<br>
+                        出生日期:<input type="text" class="four editorFromDate"><span>输入格式为xxxx-xx-xx的日期</span><br>
+                        学历:<input type="text" class="two editorFromEducation"><span>输入例如本科，硕士的学历</span><br>
+                        工作岗位:<input type="text" class="four editorFromJob"><span>文字不能超10位</span><br>
+                        手机号码:<input type="text" class="four editorFromPhone"><span>输入1开头的9位手机号码</span><br>
+                        家庭住址:<input type="text" class="four editorFromAddress"><br>
+                        <input type="button" value="提交" class="confirm2 confirm">
+                        <input type="button" value="取消" class="cancel2 cancel">
+                    </form>
+                </div>
+            </div>
+            <div class="data addEmpData none">
+                <div class="addEmpDataInner">
+                    <div class="addTitle">新增员工</div>
+                    <form class="addFrom">
+                        姓名:<input type="text" class="two addFromName"><span>输入2-5位的中文</span><br>
+                        性别:<input id="addMan" type="radio" value="男" class="sex addFromSex" checked="checked" name="sex"/>男
+                        <input type="radio" id="addWoman" value="女" class="addFromSex" name="sex">女<br>
+                        出生日期:<input type="text" class="four addFromDate"><span>输入格式为xxxx-xx-xx的日期</span><br>
+                        学历:<input type="text" class="two addFromEducation"><span>输入例如本科，硕士的学历</span><br>
+                        工作岗位:<input type="text" class="four addFromJob"><span>文字不能超10位</span><br>
+                        手机号码:<input type="text" class="four addFromPhone"><span>输入1开头的9位手机号码</span><br>
+                        家庭住址:<input type="text" class="four addFromAddress"><br>
+                        <input type="button" value="提交" class="confirm3 confirm">
+                        <input type="button" value="清空" class="cancel3 cancel">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+<script>
+    const asideDom = document.querySelector(".aside")
+    const title = document.querySelector(".title")
+    const sumDom = document.querySelector(".sum")
+    const hideArr = document.querySelectorAll(".hide")
+    const queryDom = document.querySelector(".query")
+    const addDataDom = document.querySelector(".addEmpData")
+    const empDataDom = document.querySelector(".empData")
+    const emptyDom = document.querySelector(".empty")
+    const tbody = document.querySelector(".tbody")
+    const test = document.querySelector(".test")
+    const selectDom = document.querySelector("select")
+    const pageBoxDom = document.querySelector(".pageNum")
+    const preBtn = document.querySelector(".prePage")
+    const nextBtn = document.querySelector(".nextPage")
+    const searchForm = document.querySelector(".searchForm")
+    const pop = document.querySelector(".popup")
+    const confirmBtn = document.querySelector(".confirm")
+    const cancelBtn = document.querySelector(".cancel")
+    const editorCancelBtn = document.querySelector(".cancel2")
+    const editorPop = document.querySelector(".editorPop")
+    const editorConfirmBtn = document.querySelector(".confirm2")
+    const popName = document.querySelector(".editorFromName")
+    const popMale = document.querySelectorAll(".editorFromSex")
+    const popDate = document.querySelector(".editorFromDate")
+    const popEducation = document.querySelector(".editorFromEducation")
+    const popJob = document.querySelector(".editorFromJob")
+    const popPhone = document.querySelector(".editorFromPhone")
+    const popAddress = document.querySelector(".editorFromAddress")
+    const editorFrom = document.querySelector(".editorFrom")
+    const addForm = document.querySelector(".addFrom")
+    const addConfirmBtn = document.querySelector(".confirm3")
+    const addCancelBtn = document.querySelector(".cancel3")
+    const onDom = document.querySelector(".on")
+    const bonDom = document.querySelector(".bon")
+    let editorMessageIsTrue = true
+    let addFormMessageIsTrue = false
+    let dataArr = []
+    let dataNum = 0
+    let nowPage = 1 //当前指向的盒子
+    let boxNum = 0  //存储页码盒子的个数
+    let param = {id:'',name:'',education:'',job:'',idIsTrue:true,dateIsTrue:'',onIs: 1}//存储请求参数
+    let deleteDom = ''
+    let editorDom = ''
+    let dataObjectArr = []
+    let editorPopMessage = {id:'',name:'',gender:'',birthday:'',education:'',job:'',phoneNumber:'',address:''}
+    const addFormObject = {name:'',gender:'',birthday:'',education:'',job:'',phoneNumber:'',address:''}
+    let onIs = 0
+    let bonIs = 0
+    render(1,param)
+
+    //给模块绑定事件，当点击后隐藏的模块会显示出来
+    asideDom.addEventListener("click",function (e){
+        if(e.target.classList[1]==="asideBox"){
+            let hideDom = e.target.nextElementSibling
+            hideDom.classList.toggle("hide")
+        }
+    })
+    //给选择每页记录数的下拉框添加事件，点击重新渲染页面
+    selectDom.addEventListener("click",function (e){
+        if(e.target.nodeName==="OPTION"){
+            render(1,param)
+        }
+    })
+    //给隐藏的盒子添加背景颜色,并给根据点击的栏目显示右边的数据
+    asideDom.addEventListener("click",function (e){
+        if (e.target.classList[1]==="asideBox"){
+            return
+        }
+        for (let i = 0; i < hideArr.length; i++) {
+            let hideBoxArr = hideArr[i].children
+            for (let j = 0; j < hideBoxArr.length; j++) {
+                hideBoxArr[j].classList.remove("checkColor")
+            }
+        }
+        e.target.classList.toggle("checkColor")
+        if(e.target.classList[2]==="query"){
+            empDataDom.classList.remove("none")
+            emptyDom.classList.add("none")
+            addDataDom.classList.add("none")
+            param = {id:'',name:'',education:'',job:''}
+            render(nowPage,param)
+        }else if(e.target.classList[2]==="addEmp"){
+            emptyDom.classList.add("none")
+            empDataDom.classList.add("none")
+            addDataDom.classList.remove("none")
+        }
+        else {
+            emptyDom.classList.remove("none")
+            empDataDom.classList.add("none")
+            addDataDom.classList.add("none")
+        }
+    })
+
+    //页码盒子添加事件
+    pageBoxDom.addEventListener("click",function (e){
+        let n = parseInt(e.target.innerHTML)
+        console.log("n--"+n)
+        render(n,param)
+        nowPage = n //点击页码盒子后要更新当前页码的变量值
+    })
+    //给上一页按钮添加点击事件
+    preBtn.addEventListener("click",function (){
+        if(nowPage>1){
+            /*pageBoxDom.children[nowPage-1].classList.remove("active")*/
+            nowPage--
+            render(nowPage,param)
+            /*pageBoxDom.children[nowPage-1].classList.add("active")*/
+        }
+    })
+    //给下一页按钮添加点击事件
+    nextBtn.addEventListener("click",function (){
+        if(nowPage<boxNum){
+           /* pageBoxDom.children[nowPage-1].classList.remove("active")*/
+            nowPage++
+            render(nowPage,param)
+            /*pageBoxDom.children[nowPage-1].classList.add("active")*/
+        }
+    })
+    //给条件查询按钮添加事件
+    searchForm.addEventListener("click",function (e){
+        e.preventDefault()
+        param = {id:'',name:'',education:'',job:''}
+        if (e.target.nodeName==="BUTTON"){
+            let value = e.target.previousElementSibling.value//获取选中的表单中内容
+            let key = e.target.id//获取表单key的值
+            console.log("key="+key)
+            if(key==="name"){
+                param.name = value
+                console.log("姓名")
+            }else if(key==="id"){
+                param.id = value
+            }else if(key==="education"){
+                param.education = value
+            }else {
+                param.job = value
+            }
+            render(nowPage,param)
+            e.target.previousElementSibling.value = ''//查询后清空表单中的内容
+        }
+    })
+    //给删除和编辑按钮添加事件，将点击的对应的按钮对象存储起来
+   tbody.addEventListener("click",function (e){
+       if(e.target.className==='deleteBtn'){
+           pop.style.display = "block"
+           deleteDom = e.target
+       }else if(e.target.className==='editorBtn'){
+           //编辑按钮
+           editorDom = e.target
+           editorPop.style.display = "block"
+           let id = parseInt(editorDom.dataset.eid)//获取当前编辑按钮的索引
+           console.log("impo"+id)
+           let index = selectDom.selectedIndex
+           let pageNum = parseInt(selectDom.options[index].value)//当前指定的每页记录数
+           console.log("now-"+nowPage+"-pagenum-"+pageNum)
+           let i1 = id-(nowPage-1)*pageNum
+           console.log("i1-"+i1)
+           console.log("da"+dataObjectArr[1].name)
+           console.log(dataObjectArr[i1].name)
+           popName.value = dataObjectArr[i1].name
+           popDate.value = dataObjectArr[i1].birthday
+           popEducation.value = dataObjectArr[i1].education
+           popJob.value = dataObjectArr[i1].job
+           popPhone.value = dataObjectArr[i1].phoneNumber
+           popAddress.value = dataObjectArr[i1].address
+           editorPopMessage.id = dataObjectArr[i1].id-1
+           editorPopMessage.name = dataObjectArr[i1].name
+           editorPopMessage.birthday = dataObjectArr[i1].birthday
+           editorPopMessage.education = dataObjectArr[i1].education
+           editorPopMessage.job = dataObjectArr[i1].job
+           editorPopMessage.phoneNumber = dataObjectArr[i1].phoneNumber
+           editorPopMessage.address = dataObjectArr[i1].address
+           for (let i = 0; i < popMale.length; i++) {
+               if(dataObjectArr[i1].gender==="女"){
+                   popMale[1].checked = true
+                   editorPopMessage.gender = "女"
+               }else {
+                   popMale[0].checked = true
+                   editorPopMessage.gender = "男"
+               }
+           }
+       }
+   })
+    //给确认删除按钮添加事件
+    confirmBtn.addEventListener("click",function (e){
+        pop.style.display = "none"
+        let id = parseInt(deleteDom.dataset.did)+1//获取当前删除按钮的索引
+        let idArr = {id:`${id}`}
+        ajax({
+            method: 'GET',
+            path: '/delete',
+            data: idArr
+        })//发生请求到服务器将对应id的数据删除
+        render(nowPage,param)
+    })
+    //删除框中的取消按钮
+    cancelBtn.addEventListener("click",function (){
+        pop.style.display = "none"
+
+    })
+    editorCancelBtn.addEventListener("click",function (){
+        editorPop.style.display = "none"
+    })
+    editorConfirmBtn.addEventListener("click",function (){
+        const popMale = document.querySelectorAll(".editorFromSex")
+        for (let i = 0; i < popMale.length; i++) {
+            if(popMale[i].checked){
+                editorPopMessage.gender = popMale[i].value
+            }
+        }
+
+        if (editorMessageIsTrue){
+            ajax({method: 'POST',
+                path: '/update',
+                switchBoolean: true,
+                data: editorPopMessage
+            })
+        }
+        editorPop.style.display = "none"
+        render(nowPage,param)
+    })
+    //判断编辑输入框输入的内容是否合法
+    editorFrom.addEventListener("input",function (e){
+        //判断姓名是否合法
+        console.log(e.target.classList[1])
+        if(e.target.classList[1]==="editorFromName"){
+            if (/^[\u4e00-\u9fa5]{1,5}$/.test(e.target.value)){
+                e.target.nextElementSibling.classList.remove("editorActive")
+                e.target.style.borderColor = "rgb(216, 216, 217)"
+                editorMessageIsTrue = true
+                editorPopMessage.name = e.target.value
+            }else {
+                e.target.nextElementSibling.classList.add("editorActive")
+                e.target.style.borderColor = "red"
+                editorMessageIsTrue = false
+            }
+        } else if(e.target.classList[1]==="editorFromDate"){
+            if(/^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/.test(e.target.value)){
+                e.target.nextElementSibling.classList.remove("editorActive")
+                e.target.style.borderColor = "rgb(216, 216, 217)"
+                editorMessageIsTrue = true
+                editorPopMessage.birthday = e.target.value
+            }else {
+                e.target.nextElementSibling.classList.add("editorActive")
+                e.target.style.borderColor = "red"
+                editorMessageIsTrue = false
+            }
+        }else if (e.target.classList[1]==="editorFromEducation"){
+            let str = '小学 初中 高中 专科 本科 硕士 博士'
+            let value = e.target.value
+            let regex = new RegExp(value, 'i'); // 'i' 标志表示不区分大小写
+            let b = regex.test(str);
+            if(b&&/^[\u4e00-\u9fa5]{2}$/.test(value)){
+                e.target.nextElementSibling.classList.remove("editorActive")
+                e.target.style.borderColor = "rgb(216, 216, 217)"
+                editorMessageIsTrue = true
+                editorPopMessage.education = e.target.value
+            }else {
+                e.target.nextElementSibling.classList.add("editorActive")
+                e.target.style.borderColor = "red"
+                editorMessageIsTrue = false
+            }
+        }else if(e.target.classList[1]==="editorFromJob"){
+            if(/^\S{2,10}$/.test(e.target.value)){
+                e.target.nextElementSibling.classList.remove("editorActive")
+                e.target.style.borderColor = "rgb(216, 216, 217)"
+                editorMessageIsTrue = true
+                editorPopMessage.job = e.target.value
+            }else {
+                e.target.nextElementSibling.classList.add("editorActive")
+                e.target.style.borderColor = "red"
+                editorMessageIsTrue = false
+            }
+        }else if(e.target.classList[1]==="editorFromPhone"){
+            if(/^[1]{1}\d{8}$/.test(e.target.value)){
+                e.target.nextElementSibling.classList.remove("editorActive")
+                e.target.style.borderColor = "rgb(216, 216, 217)"
+                editorMessageIsTrue = true
+                editorPopMessage.phoneNumber = e.target.value
+            }else {
+                e.target.nextElementSibling.classList.add("editorActive")
+                e.target.style.borderColor = "red"
+                editorMessageIsTrue = false
+            }
+        }else if(e.target.classList[1]==="editorFromAddress"){
+            editorPopMessage.address = e.target.value
+        }
+    })
+    //获取填入表单中的值，赋值给addFromObject
+    addForm.addEventListener("input",function (e){
+        if(e.target.classList[1]==='addFromName'){
+            if (/^[\u4e00-\u9fa5]{1,5}$/.test(e.target.value)){
+                e.target.nextElementSibling.classList.remove("addActive")
+                e.target.style.borderColor = "rgb(216, 216, 217)"
+                addFormMessageIsTrue = true
+                addFormObject.name = e.target.value
+            }else {
+                e.target.nextElementSibling.classList.add("addActive")
+                e.target.style.borderColor = "red"
+                addFormMessageIsTrue = false
+            }
+        }else if(e.target.classList[1]==='addFromDate'){
+            if(/^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/.test(e.target.value)){
+                e.target.nextElementSibling.classList.remove("addActive")
+                e.target.style.borderColor = "rgb(216, 216, 217)"
+                addFormMessageIsTrue = true
+                addFormObject.birthday = e.target.value
+            }else {
+                e.target.nextElementSibling.classList.add("addActive")
+                e.target.style.borderColor = "red"
+                addFormMessageIsTrue = false
+            }
+        }else if(e.target.classList[1]==='addFromEducation'){
+            let str = '小学 初中 高中 专科 本科 硕士 博士'
+            let value = e.target.value
+            let regex = new RegExp(value, 'i'); // 'i' 标志表示不区分大小写
+            let b = regex.test(str);
+            if(b&&/^[\u4e00-\u9fa5]{2}$/.test(value)){
+                e.target.nextElementSibling.classList.remove("addActive")
+                e.target.style.borderColor = "rgb(216, 216, 217)"
+                addFormMessageIsTrue = true
+                addFormObject.education = e.target.value
+            }else {
+                e.target.nextElementSibling.classList.add("addActive")
+                e.target.style.borderColor = "red"
+                addFormMessageIsTrue = false
+            }
+        }else if(e.target.classList[1]==='addFromJob'){
+            if(/^\S{2,10}$/.test(e.target.value)){
+                e.target.nextElementSibling.classList.remove("addActive")
+                e.target.style.borderColor = "rgb(216, 216, 217)"
+                addFormMessageIsTrue = true
+                addFormObject.job = e.target.value
+            }else {
+                e.target.nextElementSibling.classList.add("addActive")
+                e.target.style.borderColor = "red"
+                addFormMessageIsTrue = false
+            }
+        }else if(e.target.classList[1]==='addFromPhone'){
+            if(/^[1]{1}\d{8}$/.test(e.target.value)){
+                e.target.nextElementSibling.classList.remove("addActive")
+                e.target.style.borderColor = "rgb(216, 216, 217)"
+                addFormMessageIsTrue = true
+                addFormObject.phoneNumber = e.target.value
+            }else {
+                e.target.nextElementSibling.classList.add("addActive")
+                e.target.style.borderColor = "red"
+                addFormMessageIsTrue = false
+            }
+        }else if(e.target.classList[1]==='addFromAddress'){
+            addFormObject.address = e.target.value
+        }
+
+    })
+    //新增员工表的提交和清空按钮的事件
+    addConfirmBtn.addEventListener("click",function (){
+        const addFormSexArr = document.querySelectorAll(".addFromSex")
+        for (let i = 0; i < addFormSexArr.length; i++) {
+            if(addFormSexArr[i].checked){
+                addFormObject.gender = addFormSexArr[i].value
+            }
+        }
+        if(addFormMessageIsTrue){
+            ajax({method: 'POST',
+                path: '/insert',
+                switchBoolean:true,
+                data: addFormObject})
+            this.parentNode.reset()
+        }
+        render(nowPage,param)
+    })
+    addCancelBtn.addEventListener("click",function (){
+        this.parentNode.reset()
+    })
+    //点击ID和出生日期将数据进行倒序或升序排序
+    onDom.addEventListener("click",function (){
+        bonIs = 0
+        if(onIs%2===0){
+            param.idIsTrue =true
+            param.dateIsTrue = false
+        }else if(onIs%2!==0){
+            param.idIsTrue = false
+            param.dateIsTrue = false
+        }
+        onIs++
+        param.onIs = onIs
+        render(nowPage,param)
+    })
+    bonDom.addEventListener("click",function (){
+        onIs=0
+        if(bonIs%2!==0){
+            param.dateIsTrue = false
+            param.idIsTrue = false
+        }else if(bonIs%2===0){
+            param.dateIsTrue = true
+        }
+        bonIs++
+        param.onIs = onIs
+        render(nowPage,param)
+    })
+    //表格渲染函数
+    function render(num,param){
+        tbody.innerHTML = ''
+            ajax({method: 'GET',
+                path: '/query',
+                switchBoolean: true,
+                number:num,
+                data: param,
+                success: function (empObject,sum,selectPageNum){
+                    dataNum = sum
+                    sumDom.innerHTML = `共${sum}条`
+                    let index = selectDom.selectedIndex
+                    let pageNum = parseInt(selectDom.options[index].value)//当前指定的每页记录数
+                    boxNum = Math.ceil(sum/pageNum)
+                    /*for (let i = 1; i < boxNum; i++) {
+                        let divDom = document.createElement("div")
+                        divDom.innerHTML = `${i+1}`
+                        pageBoxDom.appendChild(divDom)
+                    }
+    */                  //必须用当前页面显示的数据条数计算渲染
+                    // selectPageNum当前指向的页盒子
+                    dataObjectArr.length = 0
+                    let addIndex = selectPageNum<boxNum?pageNum:sum-pageNum*(boxNum-1)
+                    if(sum>0){
+                        for (let i = pageNum*(selectPageNum-1); i < pageNum*(selectPageNum-1)+addIndex; i++) {
+                            console.log("testName"+empObject[i].name)
+                            let trDom = document.createElement("tr")
+                            trDom.innerHTML = `<tr data-trId="${i}">
+                               <td>${empObject[i].id}</td>
+                               <td>${empObject[i].name}</td>
+                               <td>${empObject[i].gender}</td>
+                               <td>${empObject[i].birthday}</td>
+                               <td>${empObject[i].education}</td>
+                               <td>${empObject[i].job}</td>
+                               <td>${empObject[i].phoneNumber}</td>
+                               <td>${empObject[i].address}</td>
+                               <td><button class="editorBtn" data-eid="${i}">编辑</button><button class="deleteBtn" data-did="${i}">删除</button></td>
+                            </tr>`
+                            tbody.appendChild(trDom)
+                            //用数组存储每一行的员工数据
+                            let dataObject = {id:empObject[i].id,name:empObject[i].name,gender:empObject[i].gender,birthday:empObject[i].birthday,education:empObject[i].education,job:empObject[i].job,phoneNumber:empObject[i].phoneNumber,address:empObject[i].address}
+                            dataObjectArr.push(dataObject)
+                        }
+                    }
+
+                    pageBoxDom.innerHTML = '<div class="active" data-id="1">1</div>'
+                    /*let index = selectDom.selectedIndex
+                    let pageNum = parseInt(selectDom.options[index].value)//当前指定的每页记录数*/
+                    boxNum = Math.ceil(sum/pageNum)//算出盒子的个数
+                    for (let i = 1; i < boxNum; i++) {
+                        let divDom = document.createElement("div")
+                        divDom.innerHTML = `<div data-id="${i+1}">${i+1}</div>`
+                        pageBoxDom.appendChild(divDom)
+                    }
+                    let activeDom = document.querySelector(".active")
+                    activeDom.classList.remove("active")
+                    let ele=document.querySelector(`[data-id="${selectPageNum}"]`);
+                    console.log("ele-"+ele.classList)
+                    ele.classList.add("active")
+                }})
+
+    }
+    //根据下拉框选择的每页记录数来加载当前盒子的数量和样式
+
+    //封装ajax请求
+    function ajax(object){
+        const request = new XMLHttpRequest()
+        request.addEventListener("readystatechange",function (){
+            // console.log("readyState"+this.readyState)
+            if(this.readyState===4){
+                if(this.status===200){
+                    // console.log("hello")
+                    //服务器正常
+                    let jsonData = this.responseText
+                    // console.log("jsonData"+jsonData)
+                    let empObject = JSON.parse(jsonData)
+                    console.log("jsonData-"+jsonData)
+                    console.log("empObject.length"+empObject.length)
+                    object.success(empObject,empObject.length,object.number)
+                }else if(this.readyState===500){
+                    console.log("sb")
+                    alert("服务器发生异常，请联系管理员")
+                }
+            }
+        })
+        let arr = []
+        for (let i in object.data) {
+            // i表示对象的key
+            // option.data[i]表示对象的值
+            arr.push(i + '=' + object.data[i]);  // ['bookname=aaa', 'author=bbb', ...]
+        }
+        //join() 把数组转化为字符串，元素是通过指定的分隔符进行分隔的，如果没有默认为逗号
+        let querystring = arr.join('&');  // bookname=aaa&author=bbb&publiser=ccc
+
+        // toUpperCase()  转大写
+        let method = object.method.toUpperCase(); // 把请求方式转成大写   识别 post / POST
+        //  判断请求
+        if (method === 'GET') {
+            request.open('GET', object.path + '?' + querystring,object.switchBoolean);
+            request.send();
+        } else if (method === 'POST') {
+            request.open('POST', object.path);
+            request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+            request.send(querystring);
+        }
+        /*request.open('GET','/query',true)
+        request.send()*/
+    }
+
+</script>
+</body>
+</html>

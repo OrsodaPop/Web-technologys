@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>高校科研管理系统</title>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        .body{
+            height: 55px;
+            width: 100%;
+            margin: 0 auto;
+            background-color: rgb(46, 49, 58);
+        }
+        .nav{
+            height: 55px;
+            width: 1050px;
+            margin: 0 auto;
+            background-color: rgb(46, 49, 58);
+        }
+        .title{
+            float: left;
+            font-size: 20px;
+            margin: 0 80px 0 10px;
+            color: white;
+            vertical-align: middle;
+            line-height: 55px;
+        }
+        .navContent{
+            line-height: 55px;
+
+        }
+        .navLeft{
+            float: left;
+            margin-right: 25px;
+        }
+        .navRight{
+            float: right;
+            margin-right: 30px;
+        }
+        .nav a{
+            color: rgb(180, 181, 190)
+        }
+        .nav a:hover{
+            color: rgb(197, 198, 204);
+            cursor: pointer;
+        }
+        .banxin{
+            height: 650px;
+            width: 100%;
+            margin: 0 auto;
+            background-color: rgb(35, 38, 46);
+            overflow: hidden;
+        }
+        .aside{
+            float: left;
+            width: 180px;
+            height: auto;
+            background-color: rgb(57, 61, 73);
+            color: rgb(180, 181, 190);
+            font-size: 14px;
+        }
+        .asideContent{
+            width: 150px;
+            height: 50px;
+            overflow: hidden;
+            line-height: 50px;
+            padding-left: 30px;
+        }
+        .asideBox{
+            cursor: pointer;
+        }
+        .asideBox:hover{
+            background-color: rgb(102, 106, 121);
+            color: rgb( 32,160,255);
+        }
+        #asideBottom{
+            margin-bottom: 350px;
+        }
+        .data{
+            float: left;
+            width: 885px;
+            height: 650px;
+            background-color: white;
+            text-align: center;
+        }
+        .none{
+            display: none;
+        }
+        .commonBox{
+            height: 50px;
+            width: 860px;
+            background-color: #e8e7e7;
+            border-left:rgb( 32,160,255) solid 10px;
+            margin: 10px auto;
+        }
+        span{
+            color: rgb(180, 181, 190);
+        }
+        .line{
+            margin: auto;
+            width: 860px;
+            border-bottom: 1px solid #e8e7e7;
+        }
+    </style>
+</head>
+<body>
+<div class="body">
+    <div class="nav">
+        <div class="title">高校科研管理系统</div>
+        <div class="navContent navLeft"><a>考勤设置</a></div>
+        <div class="navContent navLeft"><a>其他管理</a></div>
+        <img src="" class="profile">
+        <div class="navContent navRight"><a>退出</a></div>
+        <div class="navContent navRight"><a>admin</a></div>
+    </div>
+</div>
+<div class="banxin">
+    <div class="aside">
+        <div class="asideContent asideBox" id="homePage">主页</div>
+
+        <div class="asideContent asideBox">用户管理</div>
+
+        <div class="asideContent asideBox">项目人员管理</div>
+
+        <div class="asideContent asideBox">项目基本情况</div>
+
+        <div class="asideContent asideBox">项目获奖情况</div>
+
+        <div class="asideContent asideBox">期刊论文管理</div>
+
+        <div class="asideContent asideBox">科研工作量统计</div>
+
+        <div class="asideContent asideBox" id="asideBottom">科研积分统计</div>
+
+    </div>
+    <div class="data empty">
+        <div class="commonBox"></div>
+        <span>该功能尚未开发</span>
+        <div class="line"></div>
+    </div>
+    </div>
+</body>
+</html>

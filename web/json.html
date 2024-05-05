@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div></div>
+    <button class="byId">根据ID查询数据</button>
+    <button class="queryAll">查询所有数据</button>
+<script>
+    //用json接收及传递数据
+    const button1 = document.querySelector(".byId")
+    const button2 = document.querySelector(".queryAll")
+    const div = document.querySelector("div")
+    button1.addEventListener("click",function (){
+        console.log("hello")
+        const xmlHttpRequest = new XMLHttpRequest();
+        xmlHttpRequest.addEventListener("readystatechange",function (){
+            console.log(this.readyState)
+            if(this.readyState===4){
+                if(this.status===200){
+                    console.log("服务器无异常")
+                    div.innerHTML = this.responseText
+                }else if (this.status===500){
+                    alert("服务器出现严重异常，请联系管理员")
+                }
+            }
+        })
+        xmlHttpRequest.open("POST","/query",true)
+        xmlHttpRequest.send()
+    })
+    button2.addEventListener("click",function (){
+        let xmlHttpRequest = new XMLHttpRequest();
+        xmlHttpRequest.addEventListener("readystatechange",function (){
+            if (this.readyState===4){
+                if(this.status===200){
+                    console.log("服务器正常")
+                    button2.innerHTML = this.responseText
+                }
+            }
+        })
+        xmlHttpRequest.open("GET","/query",true)
+        xmlHttpRequest.send()
+    })
+</script>
+</body>
+</html>
